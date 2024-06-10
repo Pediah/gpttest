@@ -1,69 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header, footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            background-color: #f4f4f4;
-            padding: 10px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        section {
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Christ Revealed Church</title>
+  <link rel="icon" href="logo.gif">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <header>
-        <h1>My Website</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-            <li><a href="#section4">Section 4</a></li>
-        </ul>
+<body class="body-home">
+  <div class="black-fill">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="homeNav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.gif" width="80" height="80" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <section id="section1">
-        <h2>Section 1</h2>
-        <p>This is the content of section 1.</p>
-    </section>
-    <section id="section2">
-        <h2>Section 2</h2>
-        <p>This is the content of section 2.</p>
-    </section>
-    <section id="section3">
-        <h2>Section 3</h2>
-        <p>This is the content of section 3.</p>
-    </section>
-    <section id="section4">
-        <h2>Section 4</h2>
-        <p>This is the content of section 4.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?fit=crop&w=1964&q=100" class="d-block w-100 c-img" alt="Slide 1">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase">Discover the hidden world</p>
+            <h1 class="display-1 fw-bolder text-capitalize">The Aurora Tours</h1>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book a tour</button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?fit=crop&w=2134&q=100" class="d-block w-100 c-img" alt="Slide 2">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="text-uppercase fs-3 mt-5">The season has arrived</p>
+            <p class="display-1 fw-bolder text-capitalize">3 available tours</p>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">Book a tour</button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?fit=crop&w=2070&q=100" class="d-block w-100 c-img" alt="Slide 3">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="text-uppercase fs-3 mt-5">Destination activities</p>
+            <p class="display-1 fw-bolder text-capitalize">Go glacier hiking</p>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">Book a tour</button>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="card__container">
+        <article class="card__article">
+          <img src="landscape-1.png" alt="Vancouver Mountains, Canada" class="card__img">
+          <div class="card__data">
+            <span class="card__description">Vancouver Mountains, Canada</span>
+            <h2 class="card__title">The Great Path</h2>
+            <a href="#" class="card__button">Read More</a>
+          </div>
+        </article>
+        <article class="card__article">
+          <img src="landscape-2.png" alt="Poon Hill, Nepal" class="card__img">
+          <div class="card__data">
+            <span class="card__description">Poon Hill, Nepal</span>
+            <h2 class="card__title">Starry Night</h2>
+            <a href="#" class="card__button">Read More</a>
+          </div>
+        </article>
+        <article class="card__article">
+          <img src="landscape-3.png" alt="Bojcin Forest, Serbia" class="card__img">
+          <div class="card__data">
+            <span class="card__description">Bojcin Forest, Serbia</span>
+            <h2 class="card__title">Path Of Peace</h2>
+            <a href="#" class="card__button">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-white mt-5 p-3" style="font-family: 'Poppins', sans-serif; background: #0f0c29;
+  background: linear-gradient(to right, #9090c9, #a5a1cc, #8580b4);">
+       
+       <div class="col-md-12 mt-3">
+           <h3 class="text-center">Want to partner with us?</h3>
+           <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos facilis sunt, ipsa dolor aliquam accusamus sint facere repudiandae?</p>
+           <center><button class="btn btn-block btn-outline-primary">Get Started</button></center>
+       <hr>
+       </div>
+       <div class="col-md-12 d-flex justify-content-around">
+       <div class="col-md-2 text-center">
+           <h1>TP</h1>
+           <h4>The Providers</h4>
+       </div>
+       <div class="col-md-2">
+           <ul class="list-unstyled">
+           <li class="fw-bold my-2">Partnership</li>
+           <li>Website</li>
+           <li>Social Media</li>
+           <li>Branding</li>
+       </ul>
+       </div>
+       <div class="col-md-2">
+           <ul class="list-unstyled">
+               <li class="fw-bold my-2">About</li>
+               <li>Our Projects</li>
+               <li>Careers</li>
+           </ul>
+       </div>
+       <div class="col-md-2">
+           <ul class="list-unstyled">
+               <li class="fw-bold my-2">Support</li>
+               <li>Support Request</li>
+               <li>Contact</li>
+           </ul>
+       </div>
+       <div class="col-md-2">
+           <li class="fw-bold my-2 list-unstyled">Follow us</li>
+           <ul class="list-unstyled d-flex">
+               <li><i class="fa-brands fa-facebook mx-2 fa-1x"></i></li>
+               <li><i class="fa-brands fa-whatsapp mx-2 fa-1x"></i></li>
+               <li><i class="fa-brands fa-youtube mx-2 fa-1x"></i></li>
+               <li><i class="fa-brands fa-instagram mx-2 fa-1x"></i></li>
+           </ul>
+
+       </div>
+   </div><hr>
+   
+    </div>
+       <p>All copy right reserved <a href="#">The Providers</a>  2022</p>
+   </div>
+</div>
 </body>
 </html>
